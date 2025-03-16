@@ -1,0 +1,125 @@
+{{ define "main" }}
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">{{ .Title }}</h1>
+  </header>
+  <div class="post-content">
+    {{ .Content }}
+
+    <div class="gallery-container">
+      {{ $galleryDir := "images/gallery/" }} {{ $galleryFiles := readDir (print
+      "static/" $galleryDir) }} {{ if eq (len $galleryFiles) 0 }}
+      <!-- 如果没有图片文件，显示示例图片 -->
+      {{ range $index, $item := (slice 1 2 3 4 5 6) }}
+      <div class="gallery-item">
+        <a
+          href="https://picsum.photos/800/600?random={{ $item }}"
+          data-lightbox="gallery-group"
+          data-title="示例图片{{ $item }}"
+        >
+          <img
+            src="https://picsum.photos/400/300?random={{ $item }}"
+            alt="示例图片{{ $item }}"
+            loading="lazy"
+          />
+          <div class="gallery-caption">示例图片{{ $item }}</div>
+        </a>
+      </div>
+      {{ end }} {{ else }}
+      <!-- 显示实际的图片文件 -->
+      {{ range $index, $file := $galleryFiles }} {{ if ne .Name ".DS_Store" }}
+      {{ $imageName := .Name }} {{ $imageTitle := replaceRE
+      "\\.(jpg|jpeg|png|gif)$" "" .Name | humanize }}
+
+      <div class="gallery-item">
+        <a
+          href="{{ print $galleryDir $imageName | absURL }}"
+          data-lightbox="gallery-group"
+          data-title="{{ $imageTitle }}"
+        >
+          <img
+            src="{{ print $galleryDir $imageName | absURL }}"
+            alt="{{ $imageTitle }}"
+            loading="lazy"
+          />
+          <div class="gallery-caption">{{ $imageTitle }}</div>
+        </a>
+      </div>
+      {{ end }} {{ end }} {{ end }}
+    </div>
+  </div>
+</article>
+
+<style>
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    margin-top: 30px;
+  }
+
+  .gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+
+  .gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: filter 0.3s ease;
+  }
+
+  .gallery-item:hover img {
+    filter: brightness(1.1);
+  }
+
+  .gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px 12px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+  }
+
+  .gallery-item:hover .gallery-caption {
+    opacity: 1;
+  }
+
+  /* Lightbox 样式优化 */
+  .lb-data .lb-caption {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .lb-data .lb-number {
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    .gallery-container {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-gap: 15px;
+    }
+
+    .gallery-item img {
+      height: 180px;
+    }
+  }
+</style>
+{{ end }}

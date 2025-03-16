@@ -1,0 +1,222 @@
+baseURL: https://example.org/
+title: My Personal Blog
+theme: PaperMod
+
+# 启用多语言支持
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: true
+languages:
+  en:
+    languageName: English
+    weight: 1
+    title: My Personal Blog
+    params:
+      profileMode:
+        enabled: true
+        title: Welcome to My Blog
+        subtitle: A place to share my thoughts and works
+        imageUrl: "/images/profile.jpg"
+        imageWidth: 120
+        imageHeight: 120
+        buttons:
+          - name: Blog
+            url: posts
+          - name: Tags
+            url: tags
+          - name: Categories
+            url: categories
+          - name: Projects
+            url: projects
+          - name: About
+            url: about
+    menu:
+      main:
+        - identifier: home
+          name: Home
+          url: /
+          weight: 10
+        - identifier: posts
+          name: Blog
+          url: /posts/
+          weight: 20
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 30
+        - identifier: categories
+          name: Categories
+          url: /categories/
+          weight: 40
+        - identifier: projects
+          name: Projects
+          url: /projects/
+          weight: 50
+        - identifier: about
+          name: About
+          url: /about/
+          weight: 60
+        - identifier: search
+          name: Search
+          url: /search/
+          weight: 70
+  zh:
+    languageName: 中文
+    weight: 2
+    title: 我的个人博客
+    params:
+      profileMode:
+        enabled: true
+        title: 欢迎来到我的博客
+        subtitle: 分享我的想法和作品的地方
+        imageUrl: "/images/profile.jpg"
+        imageWidth: 120
+        imageHeight: 120
+        buttons:
+          - name: 博客
+            url: posts
+          - name: 标签
+            url: tags
+          - name: 分类
+            url: categories
+          - name: 项目
+            url: projects
+          - name: 关于
+            url: about
+    menu:
+      main:
+        - identifier: home
+          name: 首页
+          url: /
+          weight: 10
+        - identifier: posts
+          name: 博客
+          url: /posts/
+          weight: 20
+        - identifier: tags
+          name: 标签
+          url: /tags/
+          weight: 30
+        - identifier: categories
+          name: 分类
+          url: /categories/
+          weight: 40
+        - identifier: projects
+          name: 项目
+          url: /projects/
+          weight: 50
+        - identifier: about
+          name: 关于
+          url: /about/
+          weight: 60
+        - identifier: search
+          name: 搜索
+          url: /search/
+          weight: 70
+
+# 全局参数设置
+params:
+  # 主题设置
+  defaultTheme: auto # dark, light, auto
+  disableThemeToggle: false
+  
+  # 首页设置
+  homeInfoParams:
+    Title: "Welcome to My Blog"
+    Content: "This is a personal blog where I share my thoughts, experiences, and projects."
+  
+  # 社交链接
+  socialIcons:
+    - name: github
+      url: "https://github.com/"
+    - name: twitter
+      url: "https://twitter.com/"
+    - name: linkedin
+      url: "https://linkedin.com/"
+  
+  # 显示分享按钮
+  ShowShareButtons: true
+  
+  # 显示阅读时间
+  ShowReadingTime: true
+  
+  # 显示面包屑导航
+  ShowBreadCrumbs: true
+  
+  # 显示代码复制按钮
+  ShowCodeCopyButtons: true
+  
+  # 显示全文搜索
+  ShowFullTextSearch: true
+  
+  # 显示文章字数统计
+  ShowWordCount: true
+  
+  # 显示RSS图标
+  ShowRssButtonInSectionTermList: true
+  
+  # 启用目录
+  ShowToc: true
+  
+  # 目录自动展开
+  TocOpen: false
+
+# 启用搜索功能
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# 启用标签云
+taxonomies:
+  category: categories
+  tag: tags
+  series: series
+
+# 启用代码高亮
+markup:
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    lineNos: false
+    style: monokai
+
+  # 评论系统
+  comments: true
+  giscus:
+    repo: username/repo-name
+    repoId: YOUR_REPO_ID
+    category: Announcements
+    categoryId: YOUR_CATEGORY_ID
+    mapping: pathname
+    reactionsEnabled: 1
+    emitMetadata: 0
+    inputPosition: bottom
+    lang: en
+    loading: lazy
+    theme: preferred_color_scheme
+
+  # Google Analytics
+  googleAnalytics: G-MEASUREMENT_ID
+
+  # SEO设置
+  env: production
+  description: "A personal blog about technology, programming, and life."
+  author: Your Name
+  images: ["/images/site-feature-image.jpg"]
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowShareButtons: true
+  ShowReadingTime: true
+  displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowFullTextinRSS: true
+  enableRobotsTXT: true
+  buildDrafts: false
+  buildFuture: false
+  buildExpired: false
+  enableEmoji: true

@@ -1,0 +1,7 @@
+{{ if not .Params.disableComments }}
+  {{ if .Site.Params.comments }}
+    <div class="comments">
+      {{ partial "comments/giscus.html" . }}
+    </div>
+  {{ end }}
+{{ end }}

@@ -1,0 +1,152 @@
+{{ if .Site.Params.googleAnalytics }} {{ partial "analytics/google.html" . }} {{
+end }} {{ partial "extend_head_seo.html" . }}
+
+<!-- 添加Lightbox库，用于画廊图片查看 -->
+{{ if eq .Layout "gallery" }}
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<script>
+  // 等待页面加载完成后初始化Lightbox
+  document.addEventListener("DOMContentLoaded", function () {
+    if (typeof lightbox !== "undefined") {
+      lightbox.option({
+        resizeDuration: 200,
+        wrapAround: true,
+        albumLabel: "%1 / %2",
+        fadeDuration: 300,
+        imageFadeDuration: 300,
+        alwaysShowNavOnTouchDevices: true,
+        disableScrolling: false,
+        positionFromTop: 50,
+        showImageNumberLabel: true,
+        fitImagesInViewport: true,
+      });
+
+      // 确保所有图片链接都使用相同的data-lightbox属性
+      document.querySelectorAll("a[data-lightbox]").forEach(function (el) {
+        el.setAttribute("data-lightbox", "gallery-group");
+      });
+    }
+  });
+</script>
+{{ end }}
+
+<!-- 修复多语言环境下的图片路径问题 -->
+<style>
+  /* 确保图片在多语言环境下正确加载 */
+  img[src^="/"] {
+    content: attr(src);
+  }
+
+  /* 修复可能的404页面样式 */
+  .not-found-container {
+    min-height: 70vh;
+  }
+
+  /* 自定义Lightbox样式 */
+  .lightbox {
+    z-index: 9999;
+  }
+
+  .lb-outerContainer {
+    border-radius: 8px;
+  }
+
+  .lb-dataContainer {
+    border-radius: 0 0 8px 8px;
+  }
+
+  .lb-image {
+    border-radius: 4px;
+  }
+</style>
+
+<!-- 添加图片加载错误处理 -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // 获取当前语言
+    const currentLang = document.documentElement.lang || "en";
+    const siteRoot = window.location.origin;
+
+    // 修复所有图片路径
+    function fixImagePaths() {
+      const images = document.querySelectorAll("img");
+
+      images.forEach((img) => {
+        // 如果图片已经有src属性，先尝试加载
+        if (img.getAttribute("src")) {
+          // 为图片添加错误处理
+          img.onerror = function () {
+            handleImageError(this);
+          };
+        }
+      });
+    }
+
+    // 处理图片加载错误
+    function handleImageError(img) {
+      if (!img.src) return;
+
+      // 获取图片路径
+      const originalSrc = img.src;
+      const path = originalSrc.startsWith(siteRoot)
+        ? originalSrc.substring(siteRoot.length)
+        : originalSrc;
+
+      // 已经尝试过的路径
+      if (img.dataset.triedPaths) {
+        const triedPaths = JSON.parse(img.dataset.triedPaths);
+        if (triedPaths.includes(path)) return;
+        triedPaths.push(path);
+        img.dataset.triedPaths = JSON.stringify(triedPaths);
+      } else {
+        img.dataset.triedPaths = JSON.stringify([path]);
+      }
+
+      // 尝试不同的路径修复方案
+      const possiblePaths = [
+        `/images${path}`, // 直接在images目录下
+        `/images/${path.replace(/^\//, "")}`, // 移除开头的斜杠
+        `/images/${currentLang}${path}`, // 语言特定的images目录
+        path.replace(`/${currentLang}/`, "/"), // 移除语言前缀
+        path.replace(/^\/[a-z]{2}\//, "/"), // 移除任何语言前缀
+        `/static${path}`, // 静态目录
+        `/static/images${path}`, // 静态图片目录
+      ];
+
+      // 尝试下一个可能的路径
+      tryNextPath(img, possiblePaths, 0);
+    }
+
+    // 递归尝试下一个路径
+    function tryNextPath(img, paths, index) {
+      if (index >= paths.length) {
+        // 所有路径都尝试失败，使用占位符
+        img.src = "/images/placeholder.svg";
+        img.onerror = null; // 防止无限循环
+        return;
+      }
+
+      // 尝试当前路径
+      const newPath = paths[index];
+      const newSrc = newPath.startsWith("http")
+        ? newPath
+        : `${siteRoot}${newPath}`;
+
+      // 设置新的错误处理函数，尝试下一个路径
+      img.onerror = function () {
+        tryNextPath(img, paths, index + 1);
+      };
+
+      // 设置新的src
+      img.src = newSrc;
+    }
+
+    // 执行修复
+    fixImagePaths();
+  });
+</script>

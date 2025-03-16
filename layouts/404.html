@@ -1,0 +1,40 @@
+{{ define "main" }}
+<div class="not-found-container">
+  <div class="not-found-content">
+    {{ if eq .Site.Language.Lang "zh" }}
+    <h1>404 - 页面未找到</h1>
+    <p>抱歉，您要查找的页面不存在或已被移动。</p>
+    <a href="/zh/">返回首页</a>
+    {{ else }}
+    <h1>404 - Page Not Found</h1>
+    <p>Sorry, the page you are looking for does not exist or has been moved.</p>
+    <a href="/en/">Return to Home</a>
+    {{ end }}
+  </div>
+</div>
+<style>
+  .not-found-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    text-align: center;
+  }
+  .not-found-content {
+    max-width: 500px;
+    padding: 2rem;
+  }
+  .not-found-content a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary);
+    color: var(--theme);
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  .not-found-content a:hover {
+    opacity: 0.8;
+  }
+</style>
+{{ end }}

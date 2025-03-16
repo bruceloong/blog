@@ -1,0 +1,33 @@
+<div class="language-switcher">
+  {{ $currentPage := . }} {{ range $.Site.Home.AllTranslations }} {{
+  $isCurrentLang := eq .Language.Lang $currentPage.Language.Lang }}
+  <a
+    href="{{ .Permalink }}"
+    class="{{ if $isCurrentLang }}active{{ end }}"
+    title="{{ .Language.LanguageName }}"
+  >
+    {{ .Language.LanguageName }}
+  </a>
+  {{ end }}
+</div>
+
+<style>
+  .language-switcher {
+    display: inline-flex;
+    gap: 10px;
+    margin: 0 15px;
+  }
+  .language-switcher a {
+    text-decoration: none;
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+  .language-switcher a.active {
+    font-weight: bold;
+    background-color: var(--primary);
+    color: var(--theme);
+  }
+  .language-switcher a:not(.active):hover {
+    text-decoration: underline;
+  }
+</style>

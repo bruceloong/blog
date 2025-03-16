@@ -1,0 +1,29 @@
+{{ define "main" }}
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">{{ .Title }}</h1>
+  </header>
+  <div class="post-content">
+    {{ .Content }}
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+      <div class="form-group">
+        <label for="name">{{ if eq .Lang "zh" }}姓名{{ else }}Name{{ end }} *</label>
+        <input type="text" name="name" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">{{ if eq .Lang "zh" }}邮箱{{ else }}Email{{ end }} *</label>
+        <input type="email" name="_replyto" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="subject">{{ if eq .Lang "zh" }}主题{{ else }}Subject{{ end }} *</label>
+        <input type="text" name="subject" id="subject" required>
+      </div>
+      <div class="form-group">
+        <label for="message">{{ if eq .Lang "zh" }}消息{{ else }}Message{{ end }} *</label>
+        <textarea name="message" id="message" rows="5" required></textarea>
+      </div>
+      <button type="submit">{{ if eq .Lang "zh" }}发送{{ else }}Send{{ end }}</button>
+    </form>
+  </div>
+</article>
+{{ end }}

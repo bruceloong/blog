@@ -1,0 +1,19 @@
+.language-switcher {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0;
+}
+
+.language-switcher a {
+  margin-left: 10px;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: var(--tertiary);
+  color: var(--primary);
+}
+
+.language-switcher a.active {
+  background-color: var(--primary);
+  color: var(--tertiary);
+}
