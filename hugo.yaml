@@ -1,5 +1,5 @@
 baseURL: https://www.yss520.online/
-title: My Personal Blog
+title: Bruce Blog
 theme: PaperMod
 
 # 启用多语言支持
@@ -15,14 +15,14 @@ languages:
   en:
     languageName: English
     weight: 1
-    title: My Personal Blog
+    title: Bruce Blog
     contentDir: content/en
     params:
       profileMode:
         enabled: true
         title: Welcome to My Blog
         subtitle: A place to share my thoughts and works
-        imageUrl: "/images/profile.jpg"
+        imageUrl: "/images/profile.png"
         imageWidth: 120
         imageHeight: 120
         buttons:
@@ -77,14 +77,14 @@ languages:
   zh:
     languageName: 中文
     weight: 2
-    title: 我的个人博客
+    title: Bruce的博客
     contentDir: content/zh
     params:
       profileMode:
         enabled: true
         title: 欢迎来到我的博客
         subtitle: 分享我的想法和作品的地方
-        imageUrl: "/images/profile.jpg"
+        imageUrl: "/images/profile.png"
         imageWidth: 120
         imageHeight: 120
         buttons:
@@ -242,7 +242,7 @@ markup:
   env: production
   description: "A personal blog about technology, programming, and life."
   author: Your Name
-  images: ["/images/site-feature-image.jpg"]
+  images: ["/images/site-feature-image.webp"]
   DateFormat: "January 2, 2006"
   defaultTheme: auto
   disableThemeToggle: false

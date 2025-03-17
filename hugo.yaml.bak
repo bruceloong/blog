@@ -15,7 +15,7 @@ languages:
         enabled: true
         title: Welcome to My Blog
         subtitle: A place to share my thoughts and works
-        imageUrl: "/images/profile.jpg"
+        imageUrl: "/images/profile.png"
         imageWidth: 120
         imageHeight: 120
         buttons:
@@ -68,7 +68,7 @@ languages:
         enabled: true
         title: 欢迎来到我的博客
         subtitle: 分享我的想法和作品的地方
-        imageUrl: "/images/profile.jpg"
+        imageUrl: "/images/profile.png"
         imageWidth: 120
         imageHeight: 120
         buttons:
@@ -202,8 +202,8 @@ markup:
   # SEO设置
   env: production
   description: "A personal blog about technology, programming, and life."
-  author: Your Name
-  images: ["/images/site-feature-image.jpg"]
+  author: bruceloong
+  images: ["/images/site-feature-image.webp"]
   DateFormat: "January 2, 2006"
   defaultTheme: auto
   disableThemeToggle: false
