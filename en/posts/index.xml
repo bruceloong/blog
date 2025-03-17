@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on My Personal Blog</title><link>https://www.yss520.online/en/posts/</link><description>Recent content in Posts on My Personal Blog</description><generator>Hugo -- 0.145.0</generator><language>en</language><lastBuildDate>Sun, 01 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.yss520.online/en/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>My First Post</title><link>https://www.yss520.online/en/posts/first-post/</link><pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate><guid>https://www.yss520.online/en/posts/first-post/</guid><description>&lt;h1 id="welcome-to-my-blog">Welcome to My Blog&lt;/h1>
+&lt;p>This is my first post on my new Hugo blog. I hope you like it!&lt;/p>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>This is an example post to show you the features of Hugo and the PaperMod theme.&lt;/p>
+&lt;h2 id="features">Features&lt;/h2>
+&lt;ul>
+&lt;li>Fast and lightweight&lt;/li>
+&lt;li>SEO friendly&lt;/li>
+&lt;li>Responsive design&lt;/li>
+&lt;li>Dark/Light mode&lt;/li>
+&lt;li>Table of Contents&lt;/li>
+&lt;li>Multiple language support&lt;/li>
+&lt;/ul></description></item></channel></rss>
