@@ -78,7 +78,7 @@ _2017 年 - 2019 年_
 
 ## 联系方式
 
-- **邮箱**: bruce@example.com
+- **邮箱**: [bruceliii@foxmail.com](mailto:bruceliii@foxmail.com)
 - **GitHub**: [github.com/phongm](https://github.com/phongm)
 - **Twitter**: [@reyli](https://twitter.com/reyli1995)
 
