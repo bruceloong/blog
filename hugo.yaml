@@ -240,7 +240,7 @@ markup:
   env: production
   description: "A personal blog about technology, programming, and life."
   author: bruceli
-  images: ["/images/site-feature-image.webp"]
+  images: ["/images/site-feature-image.svg"]
   DateFormat: "January 2, 2006"
   defaultTheme: auto
   disableThemeToggle: false

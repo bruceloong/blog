@@ -1,7 +1,14 @@
 ---
-date: "2023-03-29T23:26:33+08:00"
+date: "2023-03-28T17:42:33+08:00"
 draft: false
-title: "React Virtual Dom"
+title: "React虚拟DOM深度剖析"
+description: "探究React虚拟DOM的实现原理、Fiber架构的设计思想及性能优化策略"
+tags: ["React", "虚拟DOM", "Fiber", "前端开发", "性能优化"]
+categories: ["React深度解析"]
+cover:
+  image: "/images/real-covers/virtual-dom.jpg"
+  alt: "React虚拟DOM"
+  caption: "深入React渲染机制的核心"
 ---
 
 # 拆解 React 虚拟 DOM：源码分析与实战思考

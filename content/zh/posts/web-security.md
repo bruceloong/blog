@@ -1,7 +1,14 @@
 ---
 date: "2023-08-12T00:21:02+08:00"
 draft: false
-title: "Web Security"
+title: "前端安全护城河"
+description: "从一场真实的安全危机到构建完整的前端安全防御体系的实战指南"
+tags: ["Web安全", "XSS", "CSRF", "前端安全", "安全最佳实践"]
+categories: ["安全"]
+cover:
+  image: "/images/real-covers/web-security.jpg"
+  alt: "Web前端安全"
+  caption: "构建坚不可摧的前端安全壁垒"
 ---
 
 # 前端安全护城河：从一场安全危机到体系化解决方案

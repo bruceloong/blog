@@ -1,7 +1,14 @@
 ---
 date: "2023-07-25T22:13:24+08:00"
 draft: false
-title: "Architecture and Performance"
+title: "现代前端架构设计与性能优化"
+description: "从分形到原子的性能提升之旅：如何将一个大型React应用的首屏加载时间从8.6秒降至1.2秒"
+tags: ["架构设计", "性能优化", "React", "前端工程化"]
+categories: ["技术深度剖析"]
+cover:
+  image: "/images/real-covers/architecture.jpg"
+  alt: "现代前端架构设计"
+  caption: "从单体应用到微前端的性能提升之旅"
 ---
 
 # 现代前端架构设计与性能：从分形到原子的性能提升之旅
@@ -1001,3 +1008,9 @@ module.exports = {
 架构层面的优化提供了比组件级优化更持久、更深远的价值。正如我们在这个项目中所证明的，思考系统的分形结构，从整体到局部，能带来超出预期的性能改进。
 
 无论你是构建全新应用还是改进现有系统，记住这一点：伟大的性能始于伟大的架构，二者相辅相成，共同构建卓越的用户体验。
+
+## 相关阅读
+
+- [Vite 构建 React 项目的极致优化](/zh/posts/vite-compile-optimization/) - 了解如何优化前端构建流程
+- [React 虚拟 DOM 深度剖析](/zh/posts/react-virtual-dom/) - 深入理解 React 渲染机制
+- [现代前端工程化实践指南](/zh/posts/front-end-engineering/) - 探索更多工程化最佳实践

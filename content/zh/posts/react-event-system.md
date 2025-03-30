@@ -1,7 +1,14 @@
 ---
-date: "2023-03-31T23:30:23+08:00"
+date: "2023-04-05T18:23:41+08:00"
 draft: false
-title: "React Event System"
+title: "React事件系统原理与实践"
+description: "解析React合成事件机制的设计思想、实现原理及优化技巧"
+tags: ["React", "事件系统", "合成事件", "前端开发"]
+categories: ["React深度解析"]
+cover:
+  image: "/images/real-covers/react-events.jpg"
+  alt: "React事件系统"
+  caption: "解密React的事件处理机制"
 ---
 
 # 揭秘 React 事件系统：从源码看原理与优化

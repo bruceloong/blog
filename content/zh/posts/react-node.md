@@ -1,7 +1,14 @@
 ---
-date: "2023-04-06T21:41:19+08:00"
+date: "2023-04-15T09:47:28+08:00"
 draft: false
-title: "React Node"
+title: "React Node与JSX转换机制详解"
+description: "深入探究React元素的创建过程、JSX转换原理及其在渲染中的作用"
+tags: ["React", "JSX", "React Node", "前端开发", "组件设计"]
+categories: ["React深度解析"]
+cover:
+  image: "/images/real-covers/react-node.jpg"
+  alt: "React Node与JSX"
+  caption: "解析React元素的构建过程"
 ---
 
 # React 并发模式揭秘：从源码看架构演进

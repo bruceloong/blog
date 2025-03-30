@@ -1,7 +1,14 @@
 ---
 date: "2023-08-30T00:12:39+08:00"
 draft: false
-title: "Vite Compile Optimization"
+title: "Vite构建React项目的极致优化"
+description: "详解如何将Vite构建时间从2分钟优化到8秒，开发服务器启动时间降至3秒的全过程"
+tags: ["Vite", "构建优化", "React", "性能优化", "前端工程化"]
+categories: ["工程效率"]
+cover:
+  image: "/images/real-covers/vite-optimization.jpg"
+  alt: "Vite构建优化"
+  caption: "前端构建性能的极限突破"
 ---
 
 # Vite 构建 React 项目的极致优化：从 2 分钟到 8 秒的构建革命
@@ -1848,3 +1855,9 @@ jobs:
 最重要的是，这些优化措施不仅对单个项目有效，更形成了一套可复用的 Vite 项目优化方法论，可以应用到团队的其他项目中，全面提升前端开发的效率和质量。
 
 性能优化不是一蹴而就的，而是需要持续关注和改进的工程实践。随着项目的发展，我们会继续探索新的优化技术和方法，不断提升应用的性能表现。
+
+## 相关阅读
+
+- [现代前端架构设计与性能优化](/zh/posts/architecture-and-performance/) - 了解更多前端性能优化技巧
+- [现代前端工程化实践指南](/zh/posts/front-end-engineering/) - 探索前端工程化的全面解决方案
+- [浏览器渲染机制深度剖析](/zh/posts/browser-render/) - 理解浏览器渲染原理，提升加载性能

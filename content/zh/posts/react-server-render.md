@@ -1,7 +1,14 @@
 ---
-date: "2023-05-21T22:24:27+08:00"
+date: "2023-05-15T14:32:07+08:00"
 draft: false
-title: "React Server Render"
+title: "React服务端渲染实战指南"
+description: "从原理到实践，全面解析React SSR的技术细节、性能优化及最佳实践"
+tags: ["React", "服务端渲染", "SSR", "Next.js", "性能优化"]
+categories: ["React深度解析"]
+cover:
+  image: "/images/real-covers/react-ssr.jpg"
+  alt: "React服务端渲染"
+  caption: "打造高性能的React SSR应用"
 ---
 
 # React 服务器组件：重新思考前端与后端的边界
@@ -676,19 +683,34 @@ export function ProfileForm({ user }) {
 src/
 ├── components/
 │   ├── ui/                 # 可重用UI组件（大多是客户端组件）
-│   ├── features/           # 业务功能组件
-│   │   ├── products/
-│   │   │   ├── ProductCard.js           # 服务器组件
-│   │   │   ├── ProductGallery.client.js # 客户端组件
-│   │   │   ├── ProductReviews.js        # 服务器组件
-│   │   │   └── AddToCartButton.client.js # 客户端组件
-│   │   └── cart/
-│   ├── layout/             # 布局组件（多为服务器组件）
-│   └── providers/          # 上下文提供者（客户端组件）
-├── app/                    # 页面路由（服务器组件）
-├── actions/                # 服务器操作
-├── lib/                    # 服务器和客户端都可用的工具函数
-└── api/                    # 仅客户端使用的API客户端
+│   │   ├── Navigation/
+│   │   │   ├── index.js           # 服务器组件入口
+│   │   │   ├── MobileMenu.client.js  # 客户端交互组件
+│   │   │   └── NavItem.js         # 服务器组件
+│   │
+│   ├── products/        # 产品相关组件
+│   │   ├── Card/
+│   │   │   ├── index.js           # 服务器组件包装器
+│   │   │   ├── CardContent.js     # 服务器组件
+│   │   │   ├── AddToCart.client.js  # 客户端组件
+│   │   │   └── utils.js           # 服务器+客户端共享工具
+│   │
+│   └── ui/              # 通用UI组件
+│       ├── Button/
+│       ├── Card/
+│       └── Modal.client.js        # 明确标记客户端组件
+│
+├── lib/                 # 通用工具库
+│   ├── server/          # 仅服务器工具
+│   │   ├── db.js        # 数据库客户端
+│   │   └── auth.js      # 认证工具
+│   ├── client/          # 仅客户端工具
+│   │   └── analytics.js # 分析工具
+│   └── shared/          # 共享工具
+│       └── formatting.js # 日期/货币格式化
+│
+├── app/                 # 路由和页面
+└── actions/             # 服务器操作
 ```
 
 ### 2. 避免道具钻探，合理使用上下文
@@ -1170,7 +1192,11 @@ import { cache } from "react";
 
 // 包装数据库查询以启用缓存
 export const getProduct = cache(async (id) => {
-  return db.products.findUnique({ where: { id } });
+  const product = await db.products.findUnique({
+    where: { id },
+  });
+
+  return product;
 });
 
 export const getCategory = cache(async (id) => {

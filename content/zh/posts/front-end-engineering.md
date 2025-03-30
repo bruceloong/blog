@@ -1,7 +1,14 @@
 ---
-date: "2023-06-11T21:57:14+08:00"
+date: "2023-07-10T11:25:39+08:00"
 draft: false
-title: "Front End Engineering"
+title: "现代前端工程化实践指南"
+description: "从开发流程到部署策略，构建高效可维护的前端工程体系"
+tags: ["前端工程化", "CI/CD", "微前端", "模块化", "构建优化"]
+categories: ["工程效率"]
+cover:
+  image: "/images/real-covers/frontend-engineering.jpg"
+  alt: "前端工程化实践"
+  caption: "打造高效的前端开发工作流"
 ---
 
 # 前端构建系统的演进与优化：从打包到无构建
