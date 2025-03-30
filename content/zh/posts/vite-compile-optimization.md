@@ -1,6 +1,6 @@
 ---
 date: "2023-08-30T00:12:39+08:00"
-draft: true
+draft: false
 title: "Vite Compile Optimization"
 ---
 

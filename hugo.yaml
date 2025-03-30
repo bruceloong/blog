@@ -3,7 +3,7 @@ title: Bruce Blog
 theme: PaperMod
 
 # 启用多语言支持
-defaultContentLanguage: en
+defaultContentLanguage: zh
 defaultContentLanguageInSubdir: true
 
 # 确保URL正确处理
@@ -157,11 +157,9 @@ params:
   # 社交链接
   socialIcons:
     - name: github
-      url: "https://github.com/"
+      url: "https://github.com/phongm"
     - name: twitter
-      url: "https://twitter.com/"
-    - name: linkedin
-      url: "https://linkedin.com/"
+      url: "https://x.com/reyli1995"
 
   # 显示分享按钮
   ShowShareButtons: true
@@ -241,7 +239,7 @@ markup:
   # SEO设置
   env: production
   description: "A personal blog about technology, programming, and life."
-  author: Your Name
+  author: bruceli
   images: ["/images/site-feature-image.webp"]
   DateFormat: "January 2, 2006"
   defaultTheme: auto

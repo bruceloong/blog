@@ -1,6 +1,6 @@
 ---
 date: "2023-07-25T22:13:24+08:00"
-draft: true
+draft: false
 title: "Architecture and Performance"
 ---
 
