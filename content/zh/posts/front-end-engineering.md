@@ -6,7 +6,7 @@ description: "从开发流程到部署策略，构建高效可维护的前端工
 tags: ["前端工程化", "CI/CD", "微前端", "模块化", "构建优化"]
 categories: ["工程效率"]
 cover:
-  image: "/images/real-covers/frontend-engineering.jpg"
+  image: "/images/covers/frontend-engineering.jpg"
   alt: "前端工程化实践"
   caption: "打造高效的前端开发工作流"
 ---

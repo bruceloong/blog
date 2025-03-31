@@ -6,7 +6,7 @@ description: "揭秘React Hooks背后的链表实现机制，以及如何正确�
 tags: ["React", "Hooks", "JavaScript", "前端开发"]
 categories: ["React深度解析"]
 cover:
-  image: "/images/real-covers/react-hooks.jpg"
+  image: "/images/covers/react-hooks.jpg"
   alt: "React Hooks原理"
   caption: "解密React Hooks的工作机制"
 ---

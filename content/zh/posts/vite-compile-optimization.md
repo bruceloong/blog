@@ -6,7 +6,7 @@ description: "详解如何将Vite构建时间从2分钟优化到8秒，开发服
 tags: ["Vite", "构建优化", "React", "性能优化", "前端工程化"]
 categories: ["工程效率"]
 cover:
-  image: "/images/real-covers/vite-optimization.jpg"
+  image: "/images/covers/vite-optimization.jpg"
   alt: "Vite构建优化"
   caption: "前端构建性能的极限突破"
 ---

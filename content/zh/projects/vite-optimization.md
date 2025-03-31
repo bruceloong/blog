@@ -5,7 +5,7 @@ description: "将大型React应用的构建时间从2分钟降至8秒的实战�
 draft: false
 tags: ["Vite", "构建优化", "性能优化", "React", "前端工程化"]
 cover:
-  image: "/images/real-covers/vite-project.jpg"
+  image: "/images/covers/vite-project.jpg"
   alt: "Vite构建优化"
   caption: "前端构建性能突破"
 ---

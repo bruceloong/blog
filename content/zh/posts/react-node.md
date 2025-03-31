@@ -6,7 +6,7 @@ description: "深入探究React元素的创建过程、JSX转换原理及其在�
 tags: ["React", "JSX", "React Node", "前端开发", "组件设计"]
 categories: ["React深度解析"]
 cover:
-  image: "/images/real-covers/react-node.jpg"
+  image: "/images/covers/react-node.jpg"
   alt: "React Node与JSX"
   caption: "解析React元素的构建过程"
 ---

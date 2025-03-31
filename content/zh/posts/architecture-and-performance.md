@@ -6,7 +6,7 @@ description: "从分形到原子的性能提升之旅：如何将一个大型Rea
 tags: ["架构设计", "性能优化", "React", "前端工程化"]
 categories: ["技术深度剖析"]
 cover:
-  image: "/images/real-covers/architecture.jpg"
+  image: "/images/covers/architecture.jpg"
   alt: "现代前端架构设计"
   caption: "从单体应用到微前端的性能提升之旅"
 ---

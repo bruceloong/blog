@@ -6,7 +6,7 @@ description: "从像素到画面：详解浏览器的DOM解析、样式计算、
 tags: ["浏览器原理", "渲染引擎", "性能优化", "前端开发", "关键渲染路径"]
 categories: ["浏览器技术"]
 cover:
-  image: "/images/real-covers/browser-render.jpg"
+  image: "/images/covers/browser-render.jpg"
   alt: "浏览器渲染机制"
   caption: "揭秘浏览器从HTML到像素的全过程"
 ---

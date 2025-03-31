@@ -6,7 +6,7 @@ description: "探究React虚拟DOM的实现原理、Fiber架构的设计思想�
 tags: ["React", "虚拟DOM", "Fiber", "前端开发", "性能优化"]
 categories: ["React深度解析"]
 cover:
-  image: "/images/real-covers/virtual-dom.jpg"
+  image: "/images/covers/virtual-dom.jpg"
   alt: "React虚拟DOM"
   caption: "深入React渲染机制的核心"
 ---

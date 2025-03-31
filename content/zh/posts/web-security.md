@@ -6,7 +6,7 @@ description: "从一场真实的安全危机到构建完整的前端安全防御
 tags: ["Web安全", "XSS", "CSRF", "前端安全", "安全最佳实践"]
 categories: ["安全"]
 cover:
-  image: "/images/real-covers/web-security.jpg"
+  image: "/images/covers/web-security.jpg"
   alt: "Web前端安全"
   caption: "构建坚不可摧的前端安全壁垒"
 ---

@@ -6,7 +6,7 @@ description: "从原理到实践，全面解析React SSR的技术细节、性能
 tags: ["React", "服务端渲染", "SSR", "Next.js", "性能优化"]
 categories: ["React深度解析"]
 cover:
-  image: "/images/real-covers/react-ssr.jpg"
+  image: "/images/covers/react-ssr.jpg"
   alt: "React服务端渲染"
   caption: "打造高性能的React SSR应用"
 ---
